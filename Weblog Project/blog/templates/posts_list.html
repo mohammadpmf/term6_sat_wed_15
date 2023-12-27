@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+لیست تمامی پست ها
+{% endblock title %}
+
+{% block content %}
+{% for post in posts %}
+<div class="card shadow-sm my-3">    
+    <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted small py-2">{{ post.time_created }}</h6>
+        <p class="card-text py-3" style="text-align: justify;">
+            {{ post.text|linebreaks|truncatewords:100 }}
+        </p>
+        <div class="btn btn-sm btn-outline-success">Read More</div>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

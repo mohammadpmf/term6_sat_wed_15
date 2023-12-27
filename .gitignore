@@ -20,3 +20,5 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+drive-download-20231216T113127Z-001.zip
+__pycache__/

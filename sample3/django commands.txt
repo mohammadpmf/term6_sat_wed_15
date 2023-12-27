@@ -1,0 +1,25 @@
+django-admin startproject config .
+py -m django startproject config . 
+python -m django startproject config . 
+برای استارت کردن یک پروژه جنگو
+_____________________________________________
+py manage.py runserver
+python manage.py runserver
+برای اجرا کردن سرور
+_____________________________________________
+py manage.py migrate
+python manage.py migrate
+برای ساختن یا تغییر تیبل از روی مایگریشن های ساخته شده.
+_____________________________________________
+py manage.py makemigrations
+python manage.py makemigrations
+برای تبدیل کدهایی که ما در فایل مدلز نوشتیم به فایل های قابل فهم برای جنگو
+_____________________________________________
+py manage.py createsuperuser
+python manage.py createsuperuser
+برای ساختن سوپریوز که بتوان در پنل اصلی لاگین کرد
+_____________________________________________
+py manage.py startapp alaki
+python manage.py startapp alaki
+برای ساختن یک اپ به اسم الکی
+_____________________________________________

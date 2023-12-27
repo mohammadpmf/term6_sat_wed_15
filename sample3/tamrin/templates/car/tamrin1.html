@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cars</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Welcome {{ name }}</h1>
+    <p>Your surname is {{ surname }}</p>
+    <a href="">{{ phone_number }}</a>
+    <img width='500' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Kia_Pride_silver_vl.jpg/1200px-Kia_Pride_silver_vl.jpg" alt="a car">
+    <img width='500' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Kia_Pride_silver_vl.jpg/1200px-Kia_Pride_silver_vl.jpg" alt="2 car">
+    <img src="{% static '1.png' %}" alt="peyda nashod">
+</body>
+</html>

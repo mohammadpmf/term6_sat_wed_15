@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+جزییات پست {{ post.title }}
+{% endblock title %}
+
+{% block content %}
+<div class="card shadow my-3 p-5">
+    <h1>Title</h1>
+    <p class="small text-muted mt-2">Created on: 16 Nov 2022</p>
+    <p class="mt-2" style="text-align: justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus dicta quibusdam soluta nesciunt, autem delectus numquam quas sint, corrupti sed facilis eveniet distinctio eligendi repudiandae esse et quo nulla. Hic.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti optio dicta quod quis voluptates atque eius eos laudantium, quaerat, minima veritatis in illum saepe cum fugit! Fugit, repudiandae animi. Provident.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus qui cumque possimus id et quam? Magni consequatur sequi soluta eius aperiam, quos voluptatem a dolores atque enim numquam, est odio!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sit quis ea vero veniam blanditiis suscipit itaque quibusdam illo molestias nobis velit inventore error, rerum ipsa. Aliquid tempora voluptatum expedita!
+    </p>
+    <p class="small text-muted">Writer: poulstar teachers</p>
+    <p class="small text-muted mt">Last modified on: 16 Nov 2022</p>
+</div>
+
+<div class="card shadow my-3 p-5">
+    <h3>Comments:</h3>
+        Comments will be shown here ...
+</div>
+
+<div class="card shadow my-3 p-5">
+    <h3>Add new comment:</h3>
+    <form method="POST">
+        <div class="form-group py-2">
+            <label class="py-1" for="author_name">Enter your name:</label>
+            <input type="text" class="form-control" placeholder="e.g. John Doe" name="author_name">
+        </div>
+        <div class="form-group py-2">
+            <label class="py-1" for="email">Your Email:</label>
+            <input type="email" class="form-control" placeholder="example@gmail.com" name="email">
+        </div>
+        <div class="form-group py-2">
+            <label class="py-1" for="comment_text">Comment text:</label>
+            <textarea class="form-control" name="text" rows="3" placeholder="Enter your comment text here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-1">Submit</button>
+    </form>
+</div>
+{% endblock content %}
