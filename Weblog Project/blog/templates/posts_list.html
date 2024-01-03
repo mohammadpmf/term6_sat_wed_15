@@ -13,8 +13,12 @@
         <p class="card-text py-3" style="text-align: justify;">
             {{ post.text|linebreaks|truncatewords:100 }}
         </p>
-        <div class="btn btn-sm btn-outline-success">Read More</div>
-    </div>
+        <a href="{% url "detail" post.pk %}">
+            <div class="btn btn-sm btn-outline-success">
+                Read More
+            </div>
+        </a>
+</div>
 </div>
 {% endfor %}
 {% endblock content %}

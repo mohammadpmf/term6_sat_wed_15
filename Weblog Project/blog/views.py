@@ -8,3 +8,6 @@ def show_all_posts(request):
 def show_detail(request, pk):
     context = {'post': BlogPost.objects.get(pk=pk)}
     return render(request, 'post_detail.html', context)
+
+def new_post(request):
+    return render(request, 'post_new.html')
