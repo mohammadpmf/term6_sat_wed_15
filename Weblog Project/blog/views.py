@@ -27,3 +27,13 @@ def new_post(request):
     form = BlogPostForm()
     return render(request, 'post_new.html', {'form': form})
 
+    # if request.method=="POST":
+    #     form = BlogPostForm(request.POST)
+    #     if form.is_valid():
+    #         new_post = form.save(commit=False)
+    #         new_post.author=request.user
+    #         new_post.save()
+    #         return redirect("blog")
+    # form = BlogPostForm()
+    # return render(request, 'post_new.html', {'form': form})
+
