@@ -1,1 +1,14 @@
-صفحه پاک کردن
+{% extends "base.html" %}
+
+{% block title %}
+پاک کردن پست
+{% endblock title %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <h1>آیا از پاک کردن پست {{ post.title }} مطمئن هستید؟</h1>
+    <input class="btn btn-danger" type="submit" value="بله مطمئن هستم">
+    <a class="btn btn-warning" href="{% url 'detail' post.pk %}">خیر. به جزییات پست برگرد.</a>
+</form>
+{% endblock content %}

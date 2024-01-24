@@ -7,7 +7,8 @@ def show_all_posts(request):
     return render(request, 'posts_list.html', context)
 
 def show_detail(request, pk):
-    context = {'post': BlogPost.objects.get(pk=pk)}
+    # context = {'post': BlogPost.objects.get(pk=pk)}
+    context = {'post': get_object_or_404(BlogPost, pk=pk)}
     return render(request, 'post_detail.html', context)
 
 def new_post(request):
@@ -30,7 +31,8 @@ def new_post(request):
     return render(request, 'post_new.html', {'form': form})
 
 def update(request, pk):
-    post = BlogPost.objects.get(pk=pk)
+    # post = BlogPost.objects.get(pk=pk)
+    post=get_object_or_404(BlogPost, pk=pk)
     form = BlogPostForm(instance=post)
     return render(request, 'post_update.html', {'form': form})
 
