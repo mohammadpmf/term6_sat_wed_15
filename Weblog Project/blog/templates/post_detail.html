@@ -13,6 +13,10 @@
     </p>
     <p class="small text-muted">Writer: {{ post.author }}</p>
     <p class="small text-muted mt">Last modified on: {{ post.time_modified }} </p>
+    <div>
+        <a class="btn btn-info" href="{% url 'update' post.pk %}">ویرایش پست</a>
+        <a class="btn btn-danger" href="{% url 'delete' post.pk %}">پاک کردن پست</a>
+    </div>
 </div>
 
 <div class="card shadow my-3 p-5">

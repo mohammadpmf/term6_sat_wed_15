@@ -33,10 +33,20 @@ def new_post(request):
 def update(request, pk):
     # post = BlogPost.objects.get(pk=pk)
     post=get_object_or_404(BlogPost, pk=pk)
+    if request.method=='POST':
+        form = BlogPostForm(request.POST, instance=post)
+        if form.is_valid():
+            p = form.save(commit=False)
+            p.author = request.user
+            p.save()
+            return redirect("blog")
     form = BlogPostForm(instance=post)
-    return render(request, 'post_update.html', {'form': form})
+    return render(request, 'post_update.html', {'form': form, 'post': post})
 
 def delete(request, pk):
     # post=BlogPost.objects.get(pk=pk)
     post=get_object_or_404(BlogPost, pk=pk)
+    if request.method=='POST':
+        post.delete()
+        return redirect('blog')
     return render(request, 'post_delete.html', {'post': post})
